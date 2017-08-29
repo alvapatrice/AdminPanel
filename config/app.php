@@ -180,6 +180,9 @@ return [
 
         TCG\Voyager\VoyagerServiceProvider::class,
 
+        //cross origin resource sharing
+        Barryvdh\Cors\ServiceProvider::class,
+
     ],
 
     /*
