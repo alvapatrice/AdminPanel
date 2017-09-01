@@ -67,6 +67,7 @@ return [
 
     'storage' => [
         'disk' => 'public',
+        //'disk' => 'custom',
     ],
 
     /*
