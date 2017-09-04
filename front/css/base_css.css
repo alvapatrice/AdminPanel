@@ -1,0 +1,16 @@
+.join_us_div{
+    margin-top: 330px!important;
+}
+@media screen and (max-width: 1380px) {
+    .join_us_div {
+        margin-top: 260px!important;
+    }
+}
+@media screen and (max-width: 1000px) {
+    .content_index{
+        margin-bottom: -80px!important;
+    }
+    .join_us_div {
+        margin-top: 200px!important;
+    }
+}

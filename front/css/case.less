@@ -1,0 +1,271 @@
+.content_index{
+  margin-bottom: -150px;
+}
+@media screen and (max-width: 1000px) {
+ .success_case_div{
+   height: 460px!important;
+ }
+  .latest_infor{
+    margin-top: 140px !important;
+  }
+}
+.Latest_project_title{
+  //border:1px solid red;
+  font-size:36px;
+
+  //color:#ffffff;
+  letter-spacing:-0.28px;
+  line-height:43px;
+  text-align: center;
+  margin-bottom: 80px;
+}
+
+//成功案例
+.success_case{
+  width: 80%;
+  margin: 0 auto;
+  //border:1px solid red;
+  .success_case_div{
+    position: relative;
+    //overflow: hidden;
+    background:#ffffff;
+    box-shadow:0 5px 25px 14px rgba(0,0,0,0.24);
+    border-radius:8px;
+    //width:1074px;
+    min-height:400px;
+    margin-top: 50px;
+    >img{
+      position: absolute;
+      left:0;
+      top:0;
+      width: 100%;
+      height: 100%;
+      //min-height: 400px;
+      //max-width: 100%;
+      //min-height: 400px;
+    }
+    >.case_blue_right{
+      position: absolute;
+      width: 30%;
+      height: 100%;
+      right: 0;
+      top:0;
+      border-radius:0 8px 8px 0;
+      //display: table;
+      //border:1px solid red;
+      opacity:0.9;
+      background:#0076f1;
+      //width:477px;
+      //height:485px;
+      >.case_blue_right_div{
+        display: table;
+        width: 100%;
+        height: 100%;
+        >.case_blue_right_text{
+          //width: 80%;
+          //margin: 0 auto;
+          padding: 0 10%;
+          //border:1px solid red;
+
+          display: table-cell;
+          vertical-align: middle;
+          >.title_case{
+            //border:1px solid red;
+            //font-family:.PingFang-SC-Semibold;
+            font-size:36px;
+            color:#ffffff;
+            letter-spacing:-0.56px;
+            //text-align:left;
+          }
+          >.text_case{
+            margin-top: 20px;
+            //font-family:.PingFang-SC-Regular;
+            font-size:18px;
+            color:#ffffff;
+            letter-spacing:0.09px;
+            line-height:34px;
+            text-align:left;
+            height: 200px;
+            overflow: hidden;
+          }
+
+        }
+      }
+      &:hover{
+        width: 40%;
+        transition: all 1s;
+      }
+    }
+  }
+}
+
+.Latest_project{
+  width: 86%;
+  //border:1px solid red;
+  margin: 80px auto;
+  .Latest_project_content{
+    //border:1px solid red;
+    >p{
+      height: 50px;
+      line-height: 50px;
+      text-align: center;
+      &:hover{
+        >span{
+          font-size: 26px;
+        }
+      }
+      >span{
+        display: inline-block;
+        //width: 200px;
+        //font-family:.PingFang-SC-Medium;
+        font-size:24px;
+        color:#333333;
+        letter-spacing:-0.38px;
+        //text-align:left;
+        //border:1px solid red;
+      }
+      >a{
+        //font-family:.PingFang-SC-Medium;
+        margin-left: 4px;
+        font-size:20px;
+        color:#278bf4;
+        letter-spacing:-0.38px;
+        text-decoration: underline;
+        //text-align:left;
+      }
+
+    }
+  }
+}
+
+
+//最新资讯
+.latest_infor{
+  margin-top: 40px;
+  //border:1px solid red;
+  >.latest_infor_ul{
+    //border:1px solid red;
+    list-style: none;
+    text-align: center;
+    >li{
+      display: inline-block;
+      //font-family:.PingFang-SC-Medium;
+      font-size:20px;
+      color:#333333;
+      letter-spacing:-0.31px;
+      text-align:left;
+      padding: 0 30px;
+
+      //鼠标样式
+      cursor: pointer;
+    }
+    >.active{
+      color:#0076f1;
+    }
+  }
+
+  .latest_infor_content{
+    width: 74%;
+    margin: 0 auto;
+    //border:1px solid red;
+    overflow: hidden;
+    &:nth-child(4){
+       //border:1px solid red;
+       >.infor_content{
+         >div{
+           //border:1px solid red;
+           float: right;
+         }
+       }
+     }
+    &:nth-child(3){
+      >.infor_content{
+        float: left;
+
+        &:nth-child(2n){
+          >div{
+            float: right;
+          }
+        }
+      }
+    }
+    //>.infor_content
+    >.infor_content{
+      //border:1px solid red;
+      width: 100%;
+      min-height: 340px;
+      //line-height: 480px;
+      background:#f2f2f2;
+      margin: 40px 0!important;
+      padding: 40px 0 !important;
+      .infor_img{
+        width:60%;
+        max-height: 350px;
+      }
+
+      img{
+        //display: block;
+        //line-height: 480px;
+      }
+      .infor_p{
+        //border:1px solid red ;
+        width: 90%;
+        height: 100%;
+        margin: 0 auto;
+        .infor_title{
+          //font-family:.PingFang-SC-Medium;
+          font-size:24px;
+          line-height: 60px;
+          //border:1px solid red;
+          color:#333333;
+          letter-spacing:-0.38px;
+          text-align:left;
+        }
+        .infor_time{
+          //font-family:PingFangSC-Regular;
+          font-size:18px;
+          color:#999999;
+          letter-spacing:-0.28px;
+          text-align:left;
+          margin-bottom: 40px;
+
+        }
+        .infor_text{
+          //font-family:PingFangSC-Regular;
+          font-size:18px;
+          color:#999999;
+          letter-spacing:-0.28px;
+          text-indent: 2em;
+          //text-align:left;
+        }
+      }
+
+    }
+
+
+  }
+
+}
+.btn_page{
+  //border:1px solid red;
+  text-align: center;
+  margin-bottom: 60px;
+  >button{
+    //font-family:.PingFang-SC-Medium;
+    font-size:18px;
+    color:#999999;
+    letter-spacing:-0.28px;
+    border:none;
+    background: transparent;
+    margin: 0 30px;
+    //text-align:left;
+    &:hover{
+      color:#0076f1;
+    }
+  }
+}
+.success_case{
+  >.btn_page{
+    margin-top: 50px;
+  }
+}

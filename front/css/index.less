@@ -1,0 +1,501 @@
+
+
+//旗下产品
+.products{
+  //position: relative;
+  //top: -150px;
+  border:1px solid #fff;
+  height: 735px;
+  margin-top: -150px;
+  //background: #e4e4e4;
+  background: url("../images/products_img.png") no-repeat;
+  background-size: 100% 100%;
+
+  z-index: -1;
+  //margin-bottom: -150px;
+  //下半弧度
+  >.content_bottom_180{
+    height: 150px;
+    background: url("../images/圆弧_dowm.png");
+    //border: 1px solid red;
+    background-size:100% 100%;
+
+  }
+  //下半弧度 end
+  >.products_div{
+    //border:1px solid red;
+    margin-top: 60px;
+    text-align:center;
+
+    >.products_title{
+      //border:1px solid red;
+      width: 150px;
+      height: 50px;
+      margin: 0 auto;
+      line-height: 50px;
+
+      //font-family:.PingFang-SC-Medium;
+      font-size:36px;
+      color:#ffffff;
+      letter-spacing:-0.56px;
+
+
+    }
+    >.products_content{
+      width: 80%;
+      margin:  80px auto 0;
+
+      //border:1px solid red;
+      //font-family:.PingFang-SC-Medium;
+      font-size:18px;
+      color:#ffffff;
+      letter-spacing:0.76px;
+      line-height:37px;
+      >a{
+        display: inline-block;
+        color: #fff;
+      }
+
+    }
+  //  因为我们专业，所以猪狗专业
+    .products_intro{
+      margin-top: 86px;
+      margin-bottom: 66px;
+
+      text-align: center;
+      opacity:0.5;
+      //font-family:FZQTJW--GB1-0;
+      font-size:24px;
+      color:#ffffff;
+      letter-spacing:0.83px;
+    }
+  //  更多
+    .btn_more{
+      display: inline-block;
+      background:#0076f1;
+      border-radius:62px;
+      width:145px;
+      height:60px;
+      line-height: 60px;
+      border: none;
+
+      //font-family:.PingFang-SC-Semibold;
+      font-size:20px;
+      color:#ffffff;
+      letter-spacing:0.69px;
+      text-align: center;
+      //text-align:left;
+      >a{
+        display: inline-block;
+        width: 100%;
+        line-height: 60px;
+
+        height: 100%;
+
+        color: #fff;
+      }
+    }
+  }
+}
+//旗下产品 end
+//案例展示
+.Case{
+  //border:1px solid red;
+  background:#f3f4f9;
+  //width:1920px;
+  //min-height:1163px;
+  padding: 100px 0 150px;
+  >.Case_demonstration{
+    //border:1px solid red;
+    //min-height:1163px;
+
+    >.Case_title{
+      //border:1px solid red;
+      //font-family:.PingFang-SC-Medium;
+      margin-bottom: 94px;
+      font-size:36px;
+      color:#333333;
+      letter-spacing:-0.56px;
+      text-align: center;
+    }
+    >.case_content{
+      //border:1px solid red;
+      width: 90%;
+      //min-height: 765px;
+      margin: 0 auto!important;
+      .case_content_div{
+        overflow: hidden;
+        //border:1px solid red;
+        position: relative;
+
+        //margin-right: 24px;
+        width: 100%;
+        padding: 0;
+        //padding-right: 2%;
+        float: left;
+        //width: 470px;
+        height: 340px;
+        margin-bottom: 24px;
+        //background: #fff;
+        //background: ;
+
+        &:nth-child(3n){
+          //border:1px solid green;
+          //padding-right: 1%;
+
+        }
+        &:nth-child(0),&:nth-child(1),&:nth-child(2){
+          //border:1px solid green;
+          //margin-bottom: 24px;
+        }
+        >img{
+          width: 100%;
+          height: 100%;
+        }
+      //  蒙版
+        .meng_text{
+          position: absolute;
+          bottom: 0;
+
+          width: 100%;
+          height: 90px;
+          line-height: 90px;
+          background: #fff;
+          font-size:20px;
+          text-align: center;
+          color: #000;
+          //border:1px solid red;
+
+        }
+        &:hover{
+          .meng_text{
+            font-size: 24px;
+            color: #00a0e9;
+          }
+
+          img{
+            -webkit-transform:scale(1.2,1.2);
+            -moz-transform:scale(1.2,1.2);
+            transform:scale(1.2,1.2) ;
+            transition: all 2s;
+            //-webkit-animation-name:'img_';/*动画属性名，也就是我们前面keyframes定义的动画名*/
+            //-webkit-animation-duration: 2.5s;/*动画持续时间*/
+            ////-webkit-animation-timing-function: ease; /*动画频率，和transition-timing-function是一样的*/
+            //-webkit-animation-delay: 0s;/*动画延迟时间*/
+            //-webkit-animation-iteration-count: 1;/*定义循环资料，infinite为无限次*/
+            //-webkit-animation-direction: normal;/*定义动画方式*/
+          }
+        }
+      }
+    }
+
+    .btn_more{
+      display: block;
+      margin: 20px auto 0;
+      background: #0076f1;
+      border-radius: 62px;
+      width: 145px;
+      height: 60px;
+      line-height: 60px;
+      border: none;
+      font-size: 20px;
+      color: #ffffff;
+      letter-spacing: 0.69px;
+      text-align: center;
+      >a{
+        display: inline-block;
+        width: 100%;
+        height: 100%;
+        line-height: 60px;
+
+        color: #fff;
+      }
+
+    }
+  }
+}
+//案例展示 end
+//新闻
+.new_{
+  //border:1px solid red;
+  //height: 930px;
+  >.new_div{
+    //height: 750px;
+    width: 90%;
+    margin:90px auto ;
+    //border:1px solid red;
+    >.new_title{
+      //font-family:.PingFang-SC-Medium;
+      font-size:36px;
+      color:#333333;
+      letter-spacing:-0.56px;
+      text-align:center;
+    }
+  //  uol
+    .new_ul{
+      //border:1px solid red;
+      list-style: none;
+      height: 28px;
+      width: 410px;
+      margin: 75px auto;
+      //text-align:center;
+
+      >li{
+        float: left;
+        //font-family:.PingFang-SC-Medium;
+        font-size:20px;
+        color:#333333;
+        letter-spacing:-0.31px;
+        text-align:center;
+        margin-right: 80px;
+        font-weight: 700;
+        //控制鼠标样式
+        cursor: pointer;
+
+        &:nth-child(3){
+          margin-right: 0;
+         }
+      }
+      >.active{
+        color:#0076f1;
+      }
+    }
+    >.new_content{
+      //border:1px solid red;
+      >.new_content_Company{
+        //border:1px solid red;
+
+        >div{
+          padding: 0 10px;
+
+          >.Company_news{
+            width: 350px;
+            margin: 0 auto 20px;
+            height: 442px;
+            padding: 18px 12px;
+            text-align: center;
+            background:#ffffff;
+            >img{
+              //border:1px solid red;
+              width: 100%;
+              height: 140px;
+
+              //height: 100%;
+            }
+            >.Company_news_title{
+              //font-family:.PingFang-SC-Medium;
+              font-size:18px;
+              color:#333333;
+              letter-spacing:-0.28px;
+              text-align:left;
+              margin: 12px 0;
+
+              font-weight: 700;
+              text-indent: 1em;
+              height: 50px;
+              overflow: hidden;
+            }
+            >.Company_news_content{
+              height: 88px;
+              margin-bottom: 20px;
+
+              font-size:16px;
+              color:#999999;
+              letter-spacing:-0.25px;
+              text-align:left;
+
+              overflow: hidden;
+              >p{
+                text-indent: 2em;
+              }
+              >h2{
+                display: none;
+              }
+            }
+            >.Company_news_time{
+              position: relative;
+              //border:1px solid red;
+              height: 50px;
+              line-height: 50px;
+
+
+              >.Company_news_btn{
+                background:#999999;
+                border-radius:74px;
+                width:80px;
+                height:34px;
+                line-height: 34px;
+                border: none;
+                color: #fff;
+                >a{
+                  color: #fff;
+                  text-decoration: none;
+                }
+              }
+              >.Company_news_time_{
+                position: absolute;
+                left:0;
+                //border: 1px solid red;
+                //>p{
+                //  border:1px solid red;
+                //}
+                >.Company_news_time_big{
+                  //font-family:.PingFang-SC-Medium;
+                  font-size:20px;
+                  color:#999999;
+                  letter-spacing:-0.31px;
+                  //text-align:left;
+                  line-height:28px;
+                }
+                >.Company_news_time_small{
+                  //font-family:.PingFang-SC-Regular;
+                  font-size:18px;
+                  color:#999999;
+                  letter-spacing:-0.28px;
+                  //text-align:left;
+                  line-height:24px;
+
+                }
+              }
+            }
+            //border:1px solid red;
+            &:hover{
+
+              box-shadow:0 1px 24px 8px rgba(0,118,241,0.21);
+              border-bottom: 4px solid #0076f1;
+              .Company_news_btn{
+                background:#0076f1;
+              }
+              //width:347px;
+            }
+          }
+        }
+      }
+      //翻页
+      .news_flip{
+        //border:1px solid red;
+        height: 24px;
+        margin-top: 70px;
+        text-align: center;
+        clear: both;
+        >button{
+          //font-family:.PingFang-SC-Medium;
+          font-size:18px;
+          color:#999999;
+          letter-spacing:-0.28px;
+          text-align:left;
+          background: transparent;
+          border:none;
+          &:first-child{
+            margin-right: 120px;
+          }
+          &:hover{
+            color:#0076f1;
+          }
+        }
+      }
+      //翻页 end
+    }
+
+  }
+
+}
+//新闻 end
+
+//
+//@-moz-keyframes ripple {
+//   0% {
+//     border:1px solid red;
+//     left:5px;
+//     top:5px;
+//     opcity:75;
+//     width:0;
+//     height:0;
+//   }
+//   100% {
+//     left:-200px;
+//     top:-200px;
+//     opacity: 0;
+//     width:400px;
+//     height:400px;
+//   }
+// }
+//@-o-keyframes ripple {
+//  0% {
+//    border:1px solid red;
+//    left:5px;
+//    top:5px;
+//    opcity:75;
+//    width:0;
+//    height:0;
+//  }
+//  100% {
+//    left:-200px;
+//    top:-200px;
+//    opacity: 0;
+//    width:400px;
+//    height:400px;
+//  }
+//}
+//@keyframes ripple {
+//  0% {
+//    border:1px solid red;
+//    left:5px;
+//    top:5px;
+//    opcity:75;
+//    width:0;
+//    height:0;
+//  }
+//  100% {
+//    left:-200px;
+//    top:-200px;
+//    opacity: 0;
+//    width:400px;
+//    height:400px;
+//  }
+//}
+//
+//.dot:before{
+//  content:' ';
+//  position: absolute;
+//  z-index:2;
+//  left:0;
+//  top:0;
+//  width:10px;
+//  height:10px;
+//  background-color:#257dd9;
+//  border-radius: 50%;
+//}
+//
+//.dot:after {
+//  content:' ';
+//  position: absolute;
+//  z-index:1;
+//  width:10px;
+//  height:10px;
+//  background-color: #257dd9;
+//  border-radius: 50%;
+//  box-shadow: 0 0 10px rgba(0,0,0,.3) inset;
+//  -webkit-animation-name:'ripple';/*动画属性名，也就是我们前面keyframes定义的动画名*/
+//  -webkit-animation-duration: 2.5s;/*动画持续时间*/
+//  -webkit-animation-timing-function: ease; /*动画频率，和transition-timing-function是一样的*/
+//  -webkit-animation-delay: 0s;/*动画延迟时间*/
+//  -webkit-animation-iteration-count: infinite;/*定义循环资料，infinite为无限次*/
+//  -webkit-animation-direction: normal;/*定义动画方式*/
+//  -moz-animation-name:'ripple';/*动画属性名，也就是我们前面keyframes定义的动画名*/
+//  -moz-animation-duration: 2.5s;/*动画持续时间*/
+//  -moz-animation-timing-function: ease; /*动画频率，和transition-timing-function是一样的*/
+//  -moz-animation-delay: 0s;/*动画延迟时间*/
+//  -moz-animation-iteration-count: infinite;/*定义循环资料，infinite为无限次*/
+//  -moz-animation-direction: normal;/*定义动画方式*/
+//  -o-animation-name:'ripple';/*动画属性名，也就是我们前面keyframes定义的动画名*/
+//  -o-animation-duration: 2.5s;/*动画持续时间*/
+//  -o-animation-timing-function: ease; /*动画频率，和transition-timing-function是一样的*/
+//  -o-animation-delay: 0s;/*动画延迟时间*/
+//  -o-animation-iteration-count: infinite;/*定义循环资料，infinite为无限次*/
+//  -o-animation-direction: normal;/*定义动画方式*/
+//}
+//地图定位 end
+
+
+

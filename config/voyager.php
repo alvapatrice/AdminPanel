@@ -157,7 +157,7 @@ return [
         [
             'name'  => 'Product',
             'icon'  => 'voyager-certificate',
-            'model' => \App\Request::class,
+            'model' => \App\CustomerRequirement::class,
             'url'   => 'admin/requests',
             'image' => '/images/widget-backgrounds/04.png',
         ],

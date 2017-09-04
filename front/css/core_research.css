@@ -1,0 +1,41 @@
+.p_base {
+  text-indent: 2em;
+  color: #A9AAAB;
+  font-size: 18px;
+  line-height: 40px;
+}
+.content_index {
+  margin-bottom: -150px;
+}
+.Core_research > img {
+  display: block;
+  margin: 10px auto;
+  max-width: 100%;
+}
+.Core_research > p {
+  text-indent: 2em;
+  color: #A9AAAB;
+  font-size: 18px;
+  line-height: 40px;
+}
+.Core_research,
+.Company_profile {
+  width: 70%;
+  margin: 0 auto;
+}
+.Company_profile {
+  margin: 40px  auto 80px;
+}
+.Company_profile .products_text p {
+  text-indent: 2em;
+  color: #A9AAAB;
+  font-size: 18px;
+  line-height: 40px;
+}
+.Company_profile_title {
+  font-size: 36px;
+  letter-spacing: -0.28px;
+  line-height: 43px;
+  text-align: center;
+  margin-bottom: 80px;
+}

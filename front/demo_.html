@@ -1,0 +1,528 @@
+<!--<!DOCTYPE html>-->
+<!--<html lang="en">-->
+<!--<head>-->
+    <!--<meta charset="UTF-8">-->
+    <!--<title>Title</title>-->
+    <!--<style>-->
+        <!--ul{width: 300px;border: red;}-->
+        <!--ul li{width: 300px;height: 70px;line-height: 70px;background: #fff;text-align: center;cursor: pointer;overflow: hidden;border: 1px solid #eee;}-->
+        <!--ul li:hover .circle{-->
+            <!--animation: circle-opacity 0.5s linear 0s 1;-->
+            <!-- -webkit-animation-fill-mode:forwards;/*让动画停在最后是这个属性，*/-->
+            <!--animation-fill-mode:forwards;-->
+        <!--}-->
+        <!--ul li a{position: relative;left: -50px;color: #333;top: -30px;}-->
+        <!--.circle{background: #fff;border-radius: 50%;width: 70px;height: 70px;display: inline-block;margin: 0 auto; animation: circle-opacity 0.5s linear 0s infinite;-->
+            <!-- -webkit-animation-fill-mode:forwards;/*让动画停在最后是这个属性，*/-->
+            <!--animation-fill-mode:forwards;}-->
+
+        <!--@keyframes circle-opacity{-->
+            <!--0% {-->
+                <!--background: rgba(192,225,250,0);-->
+            <!--}-->
+            <!--50% {-->
+                <!--transform:scale(4);-->
+                <!--background: rgba(192,225,250,1);-->
+            <!--}-->
+            <!--100% {-->
+                <!--transform:scale(16);-->
+                <!--background: rgba(192,225,250,0);-->
+            <!--}-->
+        <!--}-->
+    <!--</style>-->
+<!--</head>-->
+<!--<body>-->
+
+
+
+
+<!--<ul class="clear">-->
+    <!--<span class="circle">Button</span>-->
+    <!--&lt;!&ndash;<li><span class="circle"></span><a href="#">Button</a></li>&ndash;&gt;-->
+    <!--&lt;!&ndash;<li><span class="circle"></span><a href="#">Elements</a></li>&ndash;&gt;-->
+    <!--&lt;!&ndash;<li><span class="circle"></span><a href="#">Forms</a></li>&ndash;&gt;-->
+    <!--&lt;!&ndash;<li><span class="circle"></span><a href="#">Charts</a></li>&ndash;&gt;-->
+<!--</ul>-->
+<!--</body>-->
+<!--</html>-->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Bootstrap 实例 - 滚动监听（Scrollspy）插件</title>
+    <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://cdn.bootcss.com/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<nav id="navbar-example" class="navbar navbar-default navbar-static" role="navigation">
+    <div class="container-fluid" >
+        <!--<div class="navbar-header">-->
+            <!--<button class="navbar-toggle" type="button" data-toggle="collapse"-->
+                    <!--data-target=".bs-js-navbar-scrollspy">-->
+                <!--<span class="sr-only">切换导航</span>-->
+                <!--<span class="icon-bar"></span>-->
+                <!--<span class="icon-bar"></span>-->
+                <!--<span class="icon-bar"></span>-->
+            <!--</button>-->
+            <!--<a class="navbar-brand" href="#">教程名称</a>-->
+        <!--</div>-->
+        <div class="collapse navbar-collapse bs-js-navbar-scrollspy">
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="#product_intro">产品介绍</a></li>
+                <li><a href="#System_">系统特色</a></li>
+                <li><a href="#Technical_">技术架构</a></li>
+                <li><a href="#Functional_">功能结构</a></li>
+                <li><a href="#mobile_">适配移动端</a></li>
+                <li><a href="#web_">配套网站</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<div data-spy="scroll" data-target="#navbar-example" data-offset="0"
+     style="height:100%;overflow:auto; ">
+    <!--<div class="container"  data-target="#navbar-example" data-spy="scroll" data-offset="0" >-->
+        <!--<div class="">-->
+
+        <!--顶部导航栏-->
+        <div class="top_nav row">
+
+        </div>
+        <!--顶部导航栏 end-->
+        <!--轮播图-->
+        <div id="myCarousel" class="carousel slide">
+
+
+            <div class="home_div">
+                <div class="home_nav">
+                    <div class="col-md-3 col-lg-3 img_home div_hidle">
+                        <!--<img src="images/logo.png" alt="">-->
+                    </div>
+                    <div class="col-md-9 col-lg-9 col-xs-12 home_ul_ div_hidle">
+                        <ul class="">
+                            <li class="active"><a href="#">首页</a></li>
+                            <li  class="Product_center">
+                                <a href="#">产品中心</a>
+                                <div class="Product_center_div" hidden>
+                                    <img src="images/sanjiao.png" class="span_" alt="">
+                                    <ul class="Product_center_ul">
+                                        <li>
+                                            <h4>类金融系统</h4>
+                                            <p><a href="#">互联网小贷系统</a></p>
+                                            <!--<p><a href="#">小额贷款系统</a></p>-->
+                                            <p><a href="#">融资担保系统</a></p>
+                                            <!--<p><a href="#">保理业务系统</a></p>-->
+                                            <!--<p><a href="#">汽车金融整合系统</a></p>-->
+                                            <!--<p><a href="#">车辆抵质押贷款系统</a></p>-->
+                                            <!--<p><a href="#">新车购车贷款系统</a></p>-->
+                                            <p><a href="#">汽车融资租赁系统</a></p>
+                                            <!--<p><a href="#">车商库存融资系统</a></p>-->
+                                            <p><a href="#">现金贷系统</a></p>
+                                            <!--<p><a href="#">零用贷系统</a></p>-->
+                                            <p><a href="#">个人信用贷系统</a></p>
+                                            <p><a href="#">消费信用贷系统</a></p>
+                                            <p><a href="#">贷款报单系统</a></p>
+                                            <!--<p><a href="#">房产转按揭系统</a></p>-->
+                                            <p><a href="#">房产抵押按揭系统</a></p>
+
+                                            <p><a href="#">消费购物分期系统</a></p>
+                                            <!--<p><a href="#">消费信贷系统</a></p>-->
+                                            <!--<p><a href="#">电商分期系统</a></p>-->
+                                            <!--<p><a href="#">教育分期系统</a></p>-->
+                                            <!--<p><a href="#">装修分期系统</a></p>-->
+                                            <!--<p><a href="#">旅游分期系统</a></p>-->
+                                            <!--<p><a href="#">租房分期系统</a></p>-->
+                                            <!--<p><a href="#">医美分期系统</a></p>-->
+                                            <!--<p><a href="#">社区商铺分期系统</a></p>-->
+                                            <p><a href="#">P2P网贷系统</a></p>
+                                            <!--<p><a href="#">贷</a></p>-->
+
+                                            <!--<p><a href="#">保理云平台系统</a></p>-->
+                                            <!--<p><a href="#">催收云平台系统</a></p>-->
+                                            <!--<p><a href="#">报单云平台系统</a></p>-->
+                                            <!--<p><a href="#">票据云平台系统</a></p>-->
+                                            <!--<p><a href="#">金融中介系统</a></p>-->
+                                            <p><a href="#">债权匹配系统</a></p>
+                                            <p><a href="#">贷款中介系统</a></p>
+                                        </li>
+                                        <li>
+                                            <h4>投资理财基金</h4>
+                                            <p><a href="#">互联网理财系统</a></p>
+                                            <p><a href="#">互联网保险系统</a></p>
+                                            <p><a href="#">私募股权投资系统</a></p>
+                                            <p><a href="#">投资项目管理系统</a></p>
+                                            <p><a href="#">基金销售管理系统</a></p>
+                                            <p><a href="#">线下财富管理系统</a></p>
+                                            <p><a href="#">黄金钱包系统</a></p>
+                                            <p><a href="#">活期理财系统</a></p>
+                                        </li>
+                                        <li>
+                                            <h4>证券交易类金融</h4>
+                                            <p><a href="#">数币交易所系统</a></p>
+                                            <p><a href="#">数币ICO平台系统</a></p>
+                                            <p><a href="#">数字货币商城系统</a></p>
+                                            <p><a href="#">虚拟货币交易系统</a></p>
+
+                                            <p><a href="#">外汇交易系统</a></p>
+                                            <p><a href="#">大宗商品交易系统</a></p>
+                                            <p><a href="#">现货交易手系统</a></p>
+                                            <p><a href="#">金融资产交易所系统</a></p>
+                                            <p><a href="#">一元夺宝系统</a></p>
+                                            <p><a href="#">征信系统</a></p>
+                                            <p><a href="#">银行系统</a></p>
+                                        </li>
+                                        <li>
+                                            <h4>供应链金融整合系统</h4>
+                                            <p><a href="#">库存融资系统</a></p>
+                                            <p><a href="#">供应商融资系统</a></p>
+                                            <p><a href="#">经销商融资系统</a></p>
+                                            <p><a href="#">物流融资系统</a></p>
+                                            <p><a href="#">股票配资系统</a></p>
+                                            <p><a href="#">期货配资系统</a></p>
+                                            <p><a href="#">产品众筹系统</a></p>
+                                            <p><a href="#">股权众筹系统</a></p>
+                                            <p><a href="#">第三方支付系统</a></p>
+                                            <p><a href="#">金融控股集团系统</a></p>
+                                            <p><a href="#">金融监管平台系统</a></p>
+
+                                        </li>
+                                        <li>
+                                            <h4>互联网终端</h4>
+                                            <p><a href="#">VR/VI定制技术体制</a></p>
+                                            <p><a href="#">人脸识别系统</a></p>
+                                            <p><a href="#">智能硬件物联网系统</a></p>
+                                            <p><a href="#">直播间解决方案</a></p>
+                                            <p><a href="#">电子商务解决方案</a></p>
+                                            <p><a href="#">共享经济解决方案</a></p>
+                                        </li>
+                                        <p class="p_clear"></p>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li><a href="#">解决方案</a></li>
+                            <li><a href="#">案例展示</a></li>
+                            <li><a href="#">行业资讯</a></li>
+                            <li><a href="#">研发基地</a></li>
+                            <li><a href="#">联系我们</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="home_text">
+                    <img src="images/banner文案.png" alt="">
+                </div>
+                <!--加入我们-->
+                <div class="join_us_div">
+                    加入我们
+                </div>
+
+            </div>
+            <!-- 轮播（Carousel）指标 -->
+            <ol class="carousel-indicators">
+                <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                <li data-target="#myCarousel" data-slide-to="1"></li>
+                <li data-target="#myCarousel" data-slide-to="2"></li>
+            </ol>
+            <!-- 轮播（Carousel）项目 -->
+            <div class="carousel-inner">
+                <div class="item active"><img src="images/Carousel1.png" alt=""> </div>
+                <div class="item"><img src="images/Carousel2.png" alt=""> </div>
+                <div class="item "><img src="images/Carousel3.png" alt=""> </div>
+            </div>
+            <!-- 轮播（Carousel）导航 -->
+            <div class="carousel-control  right">
+                <!--<a class="left " href="#myCarousel" data-slide="prev"><span>&lsaquo;</span></a>-->
+                <a class="right_" href="#myCarousel" data-slide="next"><span ><img src="images/right.png" alt=""></span></a>
+            </div>
+            <div class="carousel-control  left ">
+                <a class="left_ " href="#myCarousel" data-slide="prev"><span ><img src="images/left.png" alt=""></span></a>
+                <!--<a class="right" href="#myCarousel" data-slide="next"><span>&rsaquo;</span></a>-->
+            </div>
+        </div>
+        <!--&lt;!&ndash;轮播图 end&ndash;&gt;-->
+        <!--&lt;!&ndash;隆盈金服 主要内容&ndash;&gt;-->
+        <div class="content_index">
+
+            <div class="content_top_180">
+                <!--<img src="images/圆弧.png" alt="">-->
+                <div class="content_text" id="product_intro">
+                    <p>产品介绍<img class="title_line" src="images/标题线条.png" alt=""></p>
+
+                </div>
+
+            </div>
+            <!--中心内容771px-->
+            <div class="Product_intro">
+                <img src="images/img_project.png" alt="">
+                <p class="Product_intro_text">
+                    隆盈科技大数据征信金融整合系统由前端门户、供应链管理系统、融资管理系统、外部接口等四部分组成，
+                    通过四部分的整合以实现供应链中涉及的销售、采购、招投标、物流以及融资等管理需求，
+                    实现供应链完整链条资源的整合，实现商流、物流、资金流、信息流的“四流合一”。
+                    通过多方面的信息整合，可以重复了解企业各个环节的情况，进而可以实现风控、担保，
+                    为其提供融资、支付等方面的金融服务。融资系统支持应收账款融资、订单融资、仓单融资、
+                    配送单融资等几种方式，资金方支持P2P、保理、银行、互联网小贷公司等。
+                </p>
+                <div class="imgs_">
+                    <div>
+                        <img src="images/img_1.png" alt="">
+                        <p>高速css缓存</p>
+                    </div>
+                    <div>
+                        <img src="images/img_2.png" alt="">
+                        <p>风险控制</p>
+                    </div>
+                    <div>
+                        <img src="images/img_3.png" alt="">
+                        <p>P2P多方交易</p>
+                    </div>
+                    <div>
+                        <img src="images/img_4.png" alt="">
+                        <p>银行第三方支付</p>
+                    </div>
+                    <div>
+                        <img src="images/img_5.png" alt="">
+                        <p>公司资源整合</p>
+                    </div>
+
+                </div>
+            </div>
+            <!--中心内容771px end-->
+
+        </div>
+        <!--&lt;!&ndash;隆盈金服 主要内容 end&ndash;&gt;-->
+        <!--系统特色 System characteristic-->
+        <div class="characteristic_System" id="System_">
+            <div class="characteristic_System_">
+                <p class="System_title">系统特色<img class="title_line" src="images/标题线条.png" alt=""></p>
+                <div class="row System_content">
+                    <div class="col-lg-6 col-md-6 col-xs-12 System_img ">
+                        <img src="images/System_img.png" alt="">
+                    </div>
+                    <div class="col-lg-6 col-md-6 col-xs-12  System_text">
+                        <p><span>专业服务团队</span> ，一流的系统后台技术支持。定制服务</p>
+                        <p>复合系统包括导航系统、交通管理系统和人一机系统等。</p>
+                        <p> 维纳在创立控制论的过程中，把动物、机器的通讯和控制看做是一个系统。</p>
+                        <p>为了明确研究的对象，人为地将物质或空间与其余物质或空间分开，<span>（可以加外部链接）</span>研究对象称为系统。</p>
+                        <p>在热学中，通常把一定质量的气体作为研究对象，此研究对象就称为系统</p>
+                        <p>在流体力学中，众多流体质点的集合称为系统</p>
+                        <p>人体由运动系统、神经系统、内分泌系统、循环系统、<span>（可以加外部链接）</span>消化系统、泌尿系统、生殖系统八大系统构成。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--系统特色  end-->
+        <div class="Technical_framework" id="Technical_">
+            <div class="Technical_framework_">
+                <p class="Technical_framework_title">技术架构<img class="title_line" src="images/标题线条.png" alt=""></p>
+                <div class="Technical_framework_img">
+                    <img src="images/Technical_framework_img.png" alt="">
+                </div>
+            </div>
+        </div>
+        <!--功能结构-->
+        <div class="Functional_structure" id="Functional_">
+            <div class="Functional_structure_">
+                <p class="Functional_structure_title">功能结构<img class="title_line" src="images/标题线条.png" alt=""></p>
+                <div class="text-center Core_platform">
+                    核心平台
+                </div>
+                <div class="row Core_platform_list">
+                    <div class=" text-center" >
+                        <h4>小贷金融平台</h4>
+                        <p>贷款需求管理</p>
+                        <p>申请额度管理</p>
+                        <p>市场需求管理</p>
+                    </div>
+                    <div class=" text-center" >
+                        <h4>后台管理平台</h4>
+                        <p>后台账户管理</p>
+                        <p>后台角色管理</p>
+                        <p>业务参数管理</p>
+                        <p>报表统计管理</p>
+                        <p>权限角色管理</p>
+                    </div>
+                    <div class=" text-center" >
+                        <h4>大数据征信平台</h4>
+                        <p>个人征信管理</p>
+                        <p>银行审批管理</p>
+                        <p>正式客户管理</p>
+                        <p>客户资金管理</p>
+                    </div>
+                    <div class=" text-center" >
+                        <h4>风控平台</h4>
+                        <p>投资理财管理</p>
+                        <p>支付管理平台</p>
+                        <p>客户资产风控</p>
+                    </div>
+                </div>
+                <!--更多基础服务-->
+                <p class="more_service">
+                    更多基础服务
+                </p>
+                <div class="more_services">
+                    <span>客户营销管理</span>
+                    <span>客户档案管理</span>
+                    <span>合作渠道管理</span>
+                    <span>贷前业务查询</span>
+                    <span>贷中项目查询</span>
+                    <span>贷后业务查询</span>
+                    <span>贷后业务办理</span>
+                    <span>财务资金管理</span>
+                    <span>贷款合同管理</span>
+                    <span>抵质押物管理</span>
+                    <span>贷款档案管理</span>
+                    <span>贷款产品配置</span>
+                    <span>财务款项台账</span>
+                    <span>财务款项台账</span>
+                    <span>财务款项台账</span>
+                    <span>贷款产品配置</span>
+
+                </div>
+                <!--更多基础服务 end-->
+            </div>
+        </div>
+        <!--功能结构 end-->
+        <!--适配手机端 Adaptive mobile terminal-->
+        <div class="mobile" id="mobile_">
+            <div class="mobile_">
+                <p class="mobile_title">适配移动端<img class="title_line" src="images/标题线条.png" alt=""></p>
+                <div class="mobile_img">
+                    <img src="images/mobile_img.png" alt="">
+                </div>
+
+            </div>
+        </div>
+        <!--适配手机端 end-->
+        <!--配套网站 Supporting_website-->
+        <div class="Supporting_website" id="web_">
+            <div class="Supporting_website_">
+                <p class="Supporting_website_title">配套网站<img class="title_line" src="images/标题线条.png" alt=""></p>
+                <div class="row Supporting_website_imgs">
+                    <div class="col-lg-3 col-md-3 col-xs-6"><img class="center-block" src="images/web_img1.png" alt=""></div>
+                    <div class="col-lg-3 col-md-3 col-xs-6"><img class="center-block" src="images/web_img2.png" alt=""></div>
+                    <div class="col-lg-3 col-md-3 col-xs-6"><img class="center-block" src="images/web_img3.png" alt=""></div>
+                    <div class="col-lg-3 col-md-3 col-xs-6"><img class="center-block" src="images/web_img4.png" alt=""></div>
+                </div>
+            </div>
+        </div>
+        <!--配套网站 end-->
+        <!--&lt;!&ndash;天府基地&ndash;&gt;-->
+        <div class="Tianfu_base">
+            <div class="Tianfu_base_content">
+                <p class="Tianfu_base_title">天府研发基地<img class="title_line" src="images/标题线条.png" alt=""></p>
+                <p class="Tianfu_base_text">
+                    重庆隆盈科技有限公司（以下简称隆盈科技）是国内著名的金融ERP系统提供商，公司总部坐落于金融新都－重庆，其核心研发基地设于天府之国－四川成都环球国际，只为打造华西金融之父。
+                    公司业务聚焦于金融类的应用信息化系统服务，旗下拥有“隆盈金服”品牌专注于金融信息化领域企业级应用级及云服务。隆盈科技拥有多项计算机著作权，是一家拥有全业务整合系统认证的软件提供商。
+                    公司团队经过7年的技术沉淀和行业经验积累，现已发展成为国内领先的专业金融信息化综合服务商。
+                </p>
+            </div>
+        </div>
+        <!--天府基地 end-->
+        <!--建立合作-->
+        <div class="Establish_cooperation">
+            <div class="Establish_cooperation_div">
+                <p class="cooperation_title">建立合作<img class="title_line" src="images/标题线条.png" alt=""></p>
+                <div class="row cooperation_contact">
+                    <div class="col-log-4 col-xs-12 col-md-4">
+                        <div>
+                            <span>
+                                <img src="images/姓名图标.png" alt="">
+                            </span>
+                            <span class="span_input">
+                                <input type="text" placeholder="请输入您的姓名"/>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="col-log-4 col-xs-12 col-md-4">
+                        <div>
+                            <span>
+                                <img src="images/电话图标.png" alt="">
+                            </span>
+                            <span class="span_input">
+
+                                <input type="text" placeholder="请输入您的联系电话"/>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="col-log-4 col-xs-12 col-md-4">
+                        <div>
+                            <span>
+                                <img src="images/邮箱图标.png" alt="">
+                            </span>
+                            <span class="span_input">
+
+                                <input type="text" placeholder="请输入您的邮箱"/>
+                            </span>
+                        </div>
+                    </div>
+
+                </div>
+                <!--选择-->
+                <ul class="cooperation_ul">
+                    <li><label><span>行业咨询</span><div class="input_div"></div> <input type="checkbox" ></label></li>
+                    <li><label><span>解决方案</span><div class="input_div"></div><input type="checkbox"></label></li>
+                    <li><label><span>产品定制</span><div class="input_div"></div><input type="checkbox"></label></li>
+                    <li><label><span>商务合作</span><div class="input_div"></div><input type="checkbox"></label></li>
+                </ul>
+                <!--选择 end-->
+                <!--详情需求-->
+                <textarea name="" class="cooperation_textarea" cols="30" rows="10" placeholder="请输入您的需求介绍">
+
+                </textarea>
+                <!--详情需求 end-->
+                <!--提交-->
+                <button class="btn_subimt">提交</button>
+                <!--提交 end-->
+                <p class="cooperation_p">郑重承诺：您的信息仅供我司进行商务所用，进行严格保密，绝不泄密第三方</p>
+            </div>
+        </div>
+
+        <!--建立合作 end-->
+        <!--联系我们-->
+        <div class="row conact_us">
+
+        </div>
+        <!--联系我们 end-->
+
+        <!--footer-->
+        <div class="footer_div">
+
+        </div>
+        <!--footer end-->
+
+
+        <!--右边固定导航栏-->
+        <div class="left_fixed_nav">
+
+        </div>
+        <!--右边固定导航栏 end-->
+
+    <!--</div>-->
+</div>
+
+</body>
+<script>
+
+    var DT=$('.proNavBox').offset().top;
+    $(window).scroll(function(){
+        var wt=$(window).scrollTop();
+        var l=$('.tab-content>.tab-panel');
+        var s=l.length-1;
+        if(wt<DT||wt>=l.last().offset().top+l.last().height()+70){
+            $('.proNavBox').removeClass('fixed');
+            $('.proNavBox .proNav tr>td:first').addClass('active').siblings().removeClass('active');
+        }else{
+            $('.proNavBox').addClass('fixed');
+            for(var i=0;i<s;i++){
+                if(wt>=parseInt(l.eq(i).offset().top-70)&&wt<parseInt(l.eq(i+1).offset().top-70)){
+                    s=i;
+                    break;
+                }
+            }
+            $('.proNavBox .proNav tr>td:eq('+s+')').addClass('active').siblings().removeClass('active');
+        }
+    });
+
+</script>
+</html>

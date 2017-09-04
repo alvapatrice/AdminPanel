@@ -4,10 +4,12 @@ namespace App\Http\Controllers;
 
 use App\CaseStudy;
 use App\CustomerConctact;
+use App\CustomerRequirement;
 use App\DevelopmentBase;
 use App\Join;
 use App\Product;
 use App\ProductCategory;
+use App\Requirement;
 use App\Solution;
 //use App\Request;
 use Illuminate\Http\Request;
@@ -131,21 +133,37 @@ class ApiController extends Controller
     public function contactUs(Request $request){
 
         $contactus=new CustomerConctact();
-        $contactus['sender']=$request->input('');
-        $contactus['phone']=$request->input('');
-        $contactus['email']=$request->input('');
-        $contactus['interests']=$request->input('');
-        $contactus['content']=$request->input('');
+        $contactus['sender']=$request->get('name');
+        $contactus['phone']=$request->get('tel');
+        $contactus['email']=$request->get('email');
+        $contactus['interests']=$request->get('checked_input');
+        $contactus['content']=$request->get('desp');
 
         if($contactus->save()){
-            return "success";
+            return "恭喜您提交成功！<br/>感谢您对隆盈金服的支持，我们将在1个工作日内回复您！";
         }else{
-            return 'failure';
+            return "网络开小差了！<br/>感谢您的支持，请再次提交！";
         }
     }
 
     public function makeRequirement(Request $request){
-        $request= new Request();
-        //$request
+
+        $input=$request->all();
+        $requirement= new CustomerRequirement();
+        $requirement['sender']=$request->get('name');
+        $requirement['phone']=$request->get('tel');
+        $requirement['company']=$request->get('compary_name');
+        $requirement['industry']=$request->get('checked_input');
+        $requirement['systems']=$request->get('checked_input');
+        $requirement['description']=$request->get('desp');
+        $requirement['is_processed']=0;
+
+        if($requirement->save()){
+            return "恭喜您提交成功！<br/>感谢您对隆盈金服的支持，我们将在1个工作日内回复您！";
+            //return $input;
+        }else{
+            return "网络开小差了！<br/>感谢您的支持，请再次提交！";
+        }
+
     }
 }
