@@ -22,8 +22,10 @@
   border-left: 2px solid #9D9D9D;
 }
 .wirth_logo > .wirth_div .wirth_text > h4 {
+  padding-top: 10px;
   font-size: 30px;
   font-weight: 600;
+  margin-bottom: 10px;
 }
 .wirth_logo > .wirth_div .wirth_text > p {
   font-size: 16px;
@@ -132,6 +134,8 @@
 }
 .form_submit .form_content > ul > h4 {
   font-size: 18px;
+  margin-top: 30px;
+  margin-bottom: 10px;
 }
 .form_submit .form_content > ul > li {
   display: inline-block;
@@ -180,6 +184,16 @@
   color: #CFCFD2;
   text-align: center;
 }
+.solution_img {
+  max-width: 90%;
+}
+.tab-panel {
+  width: 80%;
+  margin: 0 auto!important;
+}
+.tab-panel * {
+  max-width: 100%!important;
+}
 .product_div {
   width: 80%;
   margin: 70px auto;
@@ -205,7 +219,7 @@
   letter-spacing: -0.69px;
 }
 .product_div > .product_div_ .product_div_left > div > img {
-  width: 80%;
+  width: 50%;
 }
 .product_div > .product_div_ .product_div_right {
   text-align: center;
@@ -219,6 +233,9 @@
 .product_div > .product_div_ .product_div_right > div > div {
   display: table-cell;
   vertical-align: middle;
+}
+.product_div > .product_div_ .product_div_right > div > div img {
+  height: 60px;
 }
 .product_div > .product_div_ .product_div_right > div a {
   display: inline-block;

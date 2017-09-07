@@ -3,7 +3,7 @@
  */
 mvc.controller = {};
 var url_href="http://cminic.org/public";
-var url_IMG="http://cminic.org/storage/";
+var url_IMG="http://cminic.org/public/storage/";
 mvc.controller.new_index=function () {
     var category_title=1;
     $.ajax({
@@ -11,6 +11,10 @@ mvc.controller.new_index=function () {
         headers: {
             'api_key':'1234567890',
             'Content-Type':'application/json'
+        },
+        crossDomain: true == !(document.all),
+        data:{
+            random:Math.random()
         },
         type:"GET",
         success:function (str) {
@@ -39,6 +43,10 @@ function new_content(url_) {
             'api_key':'1234567890',
             'Content-Type':'application/json'
         },
+        crossDomain: true == !(document.all),
+        data:{
+            random:Math.random()
+        },
         type:"GET",
         success:function (str) {
             var str_new=$.parseJSON(str);
@@ -50,11 +58,11 @@ function new_content(url_) {
                 var html_new_=$("<div class=\"col-xs-4\"> <div class=\"Company_news\"> " +
                     "<img src=\""+url_IMG+child.image+"\" alt=\"\"> " +
                     "<p class=\"Company_news_title\"> "+child.title+"</p> " +
-                    "<div class=\"Company_news_content\">"+child.body+" </div> <!--时间--> " +
+                    "<div class=\"Company_news_content\">"+child.excerpt+" </div> <!--时间--> " +
                     "<div class=\"Company_news_time\"> <div class=\"Company_news_time_\">" +
                     " <p class=\"Company_news_time_big\">"+string.substring(5,10)+"</p> " +
                     "<p class=\"Company_news_time_small\">"+string.substring(0,4)+"</p> </div> " +
-                    "<button class=\"Company_news_btn\"><a href=\'Latest_information.html\'>详情</a></button> </div> <!--时间 end--> " +
+                    "<a class=\"Company_news_btn\" href=\'new_details.html?news_id="+child.id+"\'>详情</a></div> <!--时间 end--> " +
                     "</div> </div>");
                 $(".new_content_Company").append(html_new_);
             }
@@ -89,6 +97,10 @@ mvc.controller.Latest_information=function () {
             'api_key':'1234567890',
             'Content-Type':'application/json'
         },
+        crossDomain: true == !(document.all),
+        data:{
+            random:Math.random()
+        },
         type:"GET",
         success:function (str) {
             var str_new_=$.parseJSON(str);
@@ -119,6 +131,10 @@ function Latest_information_content(url_,number) {
             'api_key':'1234567890',
             'Content-Type':'application/json'
         },
+        crossDomain: true == !(document.all),
+        data:{
+            random:Math.random()
+        },
         type:"GET",
         success:function (str) {
             var str_new=$.parseJSON(str);
@@ -134,7 +150,7 @@ function Latest_information_content(url_,number) {
                     "<div class=\"infor_p\">" +
                     "<p class=\"infor_title\">"+child.title+"</p>" +
                     "<p class=\"infor_time\">"+child.created_at+"</p>" +
-                    "<div class=\"infor_text\">"+child.body+"</div></div></div></div>");
+                    "<div class=\"infor_text\">"+child.excerpt+" <a href=\'new_details.html?news_id="+child.id+"\' class=\'new_details_btn\'>详情</a></div></div></div></div>");
                 $(".latest_infor_content").append(html_infor);
             }
             if(number==2){
@@ -195,6 +211,10 @@ mvc.controller.produc_index=function () {
             'api_key':'1234567890',
             'Content-Type':'application/json'
         },
+        crossDomain: true == !(document.all),
+        data:{
+            random:Math.random()
+        },
         type:"GET",
         success:function (str) {
             for(var i in str.data){
@@ -219,6 +239,10 @@ mvc.controller.case_index=function () {
             'api_key':'1234567890',
             'Content-Type':'application/json'
         },
+        crossDomain: true == !(document.all),
+        data:{
+            random:Math.random()
+        },
         type:"GET",
         success:function (str) {
             // alert(str);
@@ -241,6 +265,7 @@ mvc.controller.case_index=function () {
 };
 
 //案例展示页面 第一部分
+
 mvc.controller.case_fiey=function (url) {
     $(".success_case").html("");
     $.ajax({
@@ -248,6 +273,10 @@ mvc.controller.case_fiey=function (url) {
         headers: {
             'api_key':'1234567890',
             'Content-Type':'application/json'
+        },
+        crossDomain: true == !(document.all),
+        data:{
+            random:Math.random()
         },
         type:"GET",
         success:function (str) {
@@ -259,7 +288,8 @@ mvc.controller.case_fiey=function (url) {
                 // console.log("q342");
                 // alert(str_.title);
                 var child=str_.data[i];
-                var case_yrmian=$("<a href=\'"+child.url+"\'><div class=\"success_case_div\">" +
+                // alert(child.url);
+                var case_yrmian=$("<a href=\'http://"+child.url+"\' target=\'_blank\'><div class=\"success_case_div\">" +
                     "<img src=\""+url_IMG+child.image+"\" alt=\"\">" +
                     "<div class=\"case_blue_right\">" +
                     " <div class=\"case_blue_right_div\">" +
@@ -280,6 +310,7 @@ mvc.controller.case_fiey=function (url) {
         }
     })
 };
+mvc.controller.case_fiey("http://cminic.org/public/api/primary-case-studies");
 //案例展示页面 第一部分 end
 
 mvc.controller.case_filp=function () {
@@ -303,6 +334,10 @@ mvc.controller.case_fiey_2=function () {
             'api_key':'1234567890',
             'Content-Type':'application/json'
         },
+        crossDomain: true == !(document.all),
+        data:{
+            random:Math.random()
+        },
         type:"GET",
         success:function (str) {
             // alert(str);
@@ -313,7 +348,7 @@ mvc.controller.case_fiey_2=function () {
                 // console.log("q342");
                 // alert(str_.title);
                 var child=str_[i];
-                var case_yrmian_sec=$(" <p class=\"col-lg-6 col-md-6 col-xs-12\"><span>"+child.name+"</span><a target=\"__blank\"  href=\""+child.url+"\">"+child.url+"</a></p>");
+                var case_yrmian_sec=$(" <p class=\"col-lg-6 col-md-6 col-xs-12\"><span>"+child.name+"</span><a href=\"http://"+child.url+"\">"+child.url+"</a></p>");
 
                 $(".Latest_project_content").append(case_yrmian_sec);
             }
@@ -330,6 +365,10 @@ mvc.controller.Solution=function () {
             'api_key':'1234567890',
             'Content-Type':'application/json'
         },
+        crossDomain: true == !(document.all),
+        data:{
+            random:Math.random()
+        },
         type:"GET",
         success:function (str) {
             var str_solution=$.parseJSON(str);
@@ -345,12 +384,11 @@ mvc.controller.Solution=function () {
                         "<img class=\"center-block\" src=\""+url_IMG+html_solution.image+"\" alt=\"\"></div>" +
                         "<div class=\"col-lg-6  col-xs-12 Solution_text\">" +
                         "<h4>"+html_solution.title+"</h4>" +
-                        "<p>"+html_solution.description+"</p>" +
-                        "<a  class=\"btn_details\" href=\'Solution_details.html?id="+html_solution.id+"\'>详情</a></div> </div>");
+                        "<p>"+html_solution.description+"<a  class=\"btn_details\" href=\'Solution_details.html?id="+html_solution.id+"\'>详情</a></p>" +
+                        "</div> </div>");
                     $(".Solution").append(solution_div);
                     details_number++;
                 }
-
             }
         }
     })
@@ -363,6 +401,10 @@ mvc.controller.Solution_more=function () {
         headers: {
             'api_key':'1234567890',
             'Content-Type':'application/json'
+        },
+        crossDomain: true == !(document.all),
+        data:{
+            random:Math.random()
         },
         type:"GET",
         success:function (str) {
@@ -439,6 +481,10 @@ mvc.controller.Solution_details=function () {
             'api_key':'1234567890',
             'Content-Type':'application/json'
         },
+        crossDomain: true == !(document.all),
+        data:{
+            random:Math.random()
+        },
         type:"GET",
         success:function (str) {
             var str_solution=$.parseJSON(str);
@@ -452,6 +498,36 @@ mvc.controller.Solution_details=function () {
         }
     })
 };
+//新闻详情
+mvc.controller.new_details=function () {
+    // alert(mvc.view.getUrl("id"))
+    var details_id=mvc.view.getUrl("news_id");
+
+    $.ajax({
+        url:url_href+"/api/posts/"+details_id+"",
+        headers: {
+            'api_key':'1234567890',
+            'Content-Type':'application/json'
+        },
+        crossDomain: true == !(document.all),
+        data:{
+            random:Math.random()
+        },
+        type:"GET",
+        success:function (str) {
+            var str_solution=$.parseJSON(str);
+            for(var i in str_solution){
+                var str_details=str_solution[i];
+                $(".new_titile").html(str_details.title);
+                // $(".characteristic_System").html(str_details.content);
+                $(".solution_intro").append(str_details.body);
+                $(str_details.content).insertBefore(".Tianfu_base");
+                // Product_intro_text
+                // $(".solution_img").attr("src",""+url_IMG+str_details.image+"");
+            }
+        }
+    })
+};
 //产品列表
 mvc.controller.product_list=function () {
     var categories_p=[];
@@ -460,6 +536,10 @@ mvc.controller.product_list=function () {
         headers: {
             'api_key':'1234567890',
             'Content-Type':'application/json'
+        },
+        crossDomain: true == !(document.all),
+        data:{
+            random:Math.random()
         },
         type:"GET",
         success:function (str) {
@@ -474,12 +554,23 @@ mvc.controller.product_list=function () {
                     "<!--右边产品介绍-->" +
                     "<div class=\"col-lg-10 col-xs-9 product_div_right\">" +
                     "</div> </div></div><!--右边产品介绍 end--></div>");
+
+                if((i-0+1)%3==1){
+                    $(product_html).find(".product_div_left").css({
+                        background:"#15a6c4"
+                    });
+                }else if((i-0+1)%3==0){
+                    $(product_html).find(".product_div_left").css({
+                        background:"#5ec185"
+                    });
+                }else{
+                    $(product_html).find(".product_div_left").css({
+                        background:"#ea8448"
+
+                    });
+                }
                 $(".product_div").append(product_html);
             }
-            // console.log($(".product_div_left").length);
-            $(".product_div_left").css({
-                background:"#15a6c4"
-            });
             //小分类
             for(var k in categories_p){
                 var categories_number=categories_p[k];
@@ -489,6 +580,10 @@ mvc.controller.product_list=function () {
                         headers: {
                             'api_key':'1234567890',
                             'Content-Type':'application/json'
+                        },
+                        crossDomain: true == !(document.all),
+                        data:{
+                            random:Math.random()
                         },
                         type:"GET",
                         success:function (str) {
@@ -544,19 +639,28 @@ mvc.controller.prodcut_details=function () {
             'api_key':'1234567890',
             'Content-Type':'application/json'
         },
+        crossDomain: true == !(document.all),
+        data:{
+            random:Math.random()
+        },
         type:"GET",
         success:function (str) {
+
             var str_solution=$.parseJSON(str);
+            // console.log(str_solution);
+
             for(var i in str_solution){
                 var str_details=str_solution[i];
                 // $(".characteristic_System").html(str_details.content);
                 // $(".product_name").html(str_details.name);
-                console.log(str_details.mob_terminals);
+                //标题
+                $(".text_img_title").html(str_details.name);
 
 
                 // $(".Product_intro_img").attr("src",""+url_IMG+str_details.icon+"");
                 $(".Product_intro_text").html(str_details.description);
                 $(str_details.content).insertBefore(".footer_");
+
                 // alert(str_details.mob_terminals.length)
                 var web_=$.parseJSON(str_details.web_terminals);
                 for(var j in web_){
@@ -605,6 +709,14 @@ mvc.controller.prodcut_details=function () {
                         prevButton: '.swiper-button-prev'
                     });
                 }
+
+                if(!str_details.web_terminals){
+                    // alert("web_terminals");
+                    $(".footer_").hide();
+                }
+                if(!str_details.mob_terminals){
+                    $(".milo_").hide();
+                }
             }
         }
     })
@@ -619,6 +731,10 @@ mvc.controller.nav_list=function () {
         headers: {
             'api_key':'1234567890',
             'Content-Type':'application/json'
+        },
+        crossDomain: true == !(document.all),
+        data:{
+            random:Math.random()
         },
         type:"GET",
         success:function (str) {
@@ -638,6 +754,10 @@ mvc.controller.nav_list=function () {
                         headers: {
                             'api_key':'1234567890',
                             'Content-Type':'application/json'
+                        },
+                        crossDomain: true == !(document.all),
+                        data:{
+                            random:Math.random()
                         },
                         type:"GET",
                         success:function (str) {
@@ -669,6 +789,10 @@ mvc.controller.de_customization=function () {
             'api_key':'1234567890',
             'Content-Type':'application/json'
         },
+        crossDomain: true == !(document.all),
+        data:{
+            random:Math.random()
+        },
         type:"GET",
         success:function (str) {
             var str_product=$.parseJSON(str);
@@ -688,6 +812,10 @@ mvc.controller.de_customization=function () {
                         headers: {
                             'api_key':'1234567890',
                             'Content-Type':'application/json'
+                        },
+                        crossDomain: true == !(document.all),
+                        data:{
+                            random:Math.random()
                         },
                         type:"GET",
                         success:function (str) {
@@ -731,6 +859,10 @@ mvc.controller.rd_base=function () {
             'api_key':'1234567890',
             'Content-Type':'application/json'
         },
+        crossDomain: true == !(document.all),
+        data:{
+            random:Math.random()
+        },
         type:"GET",
         success:function (str) {
             var bases=$.parseJSON(str);
@@ -755,6 +887,10 @@ mvc.controller.rd_base_details=function () {
             'api_key':'1234567890',
             'Content-Type':'application/json'
         },
+        crossDomain: true == !(document.all),
+        data:{
+            random:Math.random()
+        },
         type:"GET",
         success:function (str) {
             var bases=$.parseJSON(str);
@@ -777,10 +913,14 @@ mvc.controller.about_us=function () {
     var base_id=mvc.view.getUrl("about_");
 
     $.ajax({
-        url:url_href+"/api/about-us/"+base_id+"",
+        url:"http://cminic.org/public/api/about-us/"+base_id+"",
         headers: {
             'api_key':'1234567890',
             'Content-Type':'application/json'
+        },
+        crossDomain: true == !(document.all),
+        data:{
+            random:Math.random()
         },
         type:"GET",
         success:function (str) {
@@ -807,14 +947,23 @@ mvc.controller.products_featured=function () {
             'api_key':'1234567890',
             'Content-Type':'application/json'
         },
+        crossDomain: true == !(document.all),
+        data:{
+            random:Math.random()
+        },
         type:"GET",
         success:function (str) {
+            // alert("ok");
+
             var products_featured=$.parseJSON(str);
 
             for(var i in products_featured){
-                var products_featured_=products_featured[i];
-                var products_featured_div=$("<a href=\"Product_center.html?product_id="+products_featured_.id+"\">"+products_featured_.name+"</a><span> ／</span>");
-                $(".products_content").append(products_featured_div);
+                if(i<20){
+                    var products_featured_=products_featured[i];
+                    var products_featured_div=$("<a href=\"Product_center.html?product_id="+products_featured_.id+"\">"+products_featured_.name+"</a><span> ／</span>");
+                    $(".products_content").append(products_featured_div);
+                }
+
             }
         }
     });
@@ -829,6 +978,10 @@ mvc.controller.conten_featured=function () {
             'api_key':'1234567890',
             'Content-Type':'application/json'
         },
+        crossDomain: true == !(document.all),
+        data:{
+            random:Math.random()
+        },
         type:"GET",
         success:function (str) {
             var solutions_featured=$.parseJSON(str);
@@ -837,15 +990,7 @@ mvc.controller.conten_featured=function () {
                 var solutions_featured_=solutions_featured[i];
 
                 var solutions_icon=$.parseJSON(solutions_featured_.icon);
-                // alert("o");
-                // var solutions=solutions_featured.icon;
-                // var solutions=
                  console.log(solutions_icon.length);
-                // var icon_=$.parseJSON(solutions_featured_.icon);
-                //     console.log(solutions_icon[0]);
-                    // console.log(solutions_icon[1]);
-                // console.log(solutions_featured_.icon[0]);
-
                 var solutions_featured_div="";
                 if(i<1){
                      solutions_featured_div=$("<div class=\"col-log-4 col-md-4  col-xs-12 text-center content_details_div\"><!--大数据征信解决方案-->" +
@@ -878,6 +1023,11 @@ mvc.controller.conten_featured=function () {
                         "<button class=\"details_btn\"><a href=\"Solution_details.html?id="+solutions_featured_.id+"\">详情</a></button><!--点击详情 end--></div></div>");
                     $(".content_details").append(solutions_featured_div);
                 }
+            //    active_inner
+                $(".content_details").find(".content_details_div_inner").eq(1).addClass("active_inner");
+                $(".content_details_div_inner").hover(function () {
+                    $(".active_inner").removeClass("active_inner");
+                })
             }
         }
     });
@@ -919,7 +1069,7 @@ mvc.controller.cooperation=function () {
             $.ajax({
                 url:url_href+"/api/contact-us",
                 async: true,
-                crossDomain: true,
+                crossDomain: true == !(document.all),
                 headers: {
                     'api_key':'1234567890',
                     "content-type": "application/x-www-form-urlencoded",

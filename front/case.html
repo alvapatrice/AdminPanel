@@ -23,10 +23,10 @@
 
     <!--顶部导航栏 end-->
     <!--轮播图-->
-    <div id="myCarousel" class="carousel slide">
+    <div id="myCarousel" class="carousel slide cases">
 
         <!-- 轮播（Carousel）指标 -->
-        <img src="images/案例展示.png" class="myCarousel_img" alt="">
+        <img src="" class="myCarousel_img" alt="">
 
         <!-- 轮播（Carousel）项目 -->
 
@@ -150,6 +150,9 @@
 <!--手机屏幕出现的导航-->
 
 <!--手机屏幕出现的导航 end-->
+<!--<div class="loading">-->
+    <!--<img src="images/loading.gif" alt="">-->
+<!--</div>-->
 </body>
 
 <script src="libray/jquery-3.1.1/jquery-3.1.1.js"></script>
@@ -172,7 +175,7 @@
     //    产品中心 end
     mvc.view.in_myCarousel_img();
 
-    mvc.controller.case_fiey("http://192.168.3.54:8080/AdminPanel/public/api/primary-case-studies");//    案例展示的内容
+//    mvc.controller.case_fiey();//    案例展示的内容
     mvc.controller.case_fiey_2();//案例展示第二部分
     mvc.view.cooper_web();//建立合作
 

@@ -27,20 +27,7 @@
     margin-top: 60px;
     text-align:center;
 
-    >.products_title{
-      //border:1px solid red;
-      width: 150px;
-      height: 50px;
-      margin: 0 auto;
-      line-height: 50px;
 
-      //font-family:.PingFang-SC-Medium;
-      font-size:36px;
-      color:#ffffff;
-      letter-spacing:-0.56px;
-
-
-    }
     >.products_content{
       width: 80%;
       margin:  80px auto 0;
@@ -70,32 +57,47 @@
       letter-spacing:0.83px;
     }
   //  更多
-    .btn_more{
-      display: inline-block;
-      background:#0076f1;
-      border-radius:62px;
-      width:145px;
-      height:60px;
-      line-height: 60px;
-      border: none;
-
-      //font-family:.PingFang-SC-Semibold;
-      font-size:20px;
-      color:#ffffff;
-      letter-spacing:0.69px;
-      text-align: center;
-      //text-align:left;
-      >a{
-        display: inline-block;
-        width: 100%;
-        line-height: 60px;
-
-        height: 100%;
-
-        color: #fff;
-      }
-    }
+  //  .btn_more{
+  //    display: inline-block;
+  //    background:#0076f1;
+  //    border-radius:62px;
+  //    width:145px;
+  //    height:60px;
+  //    line-height: 60px;
+  //    border: none;
+  //
+  //    //font-family:.PingFang-SC-Semibold;
+  //    font-size:20px;
+  //    color:#ffffff;
+  //    letter-spacing:0.69px;
+  //    text-align: center;
+  //    //text-align:left;
+  //    >a{
+  //      display: inline-block;
+  //      width: 100%;
+  //      line-height: 60px;
+  //
+  //      height: 100%;
+  //
+  //      color: #fff;
+  //    }
+  //  }
   }
+}
+
+.products_title{
+  //border:1px solid red;
+  width: 240px;
+  height: 50px;
+  margin: 0 auto;
+  line-height: 50px;
+
+  //font-family:.PingFang-SC-Medium;
+  font-size:36px;
+  color:#ffffff;
+  letter-spacing:-0.56px;
+
+
 }
 //旗下产品 end
 //案例展示
@@ -134,7 +136,7 @@
         //padding-right: 2%;
         float: left;
         //width: 470px;
-        height: 340px;
+        height: 280px;
         margin-bottom: 24px;
         //background: #fff;
         //background: ;
@@ -189,29 +191,7 @@
       }
     }
 
-    .btn_more{
-      display: block;
-      margin: 20px auto 0;
-      background: #0076f1;
-      border-radius: 62px;
-      width: 145px;
-      height: 60px;
-      line-height: 60px;
-      border: none;
-      font-size: 20px;
-      color: #ffffff;
-      letter-spacing: 0.69px;
-      text-align: center;
-      >a{
-        display: inline-block;
-        width: 100%;
-        height: 100%;
-        line-height: 60px;
 
-        color: #fff;
-      }
-
-    }
   }
 }
 //案例展示 end
@@ -320,6 +300,7 @@
 
 
               >.Company_news_btn{
+                display: inline-block;
                 background:#999999;
                 border-radius:74px;
                 width:80px;
@@ -360,11 +341,11 @@
             }
             //border:1px solid red;
             &:hover{
-
               box-shadow:0 1px 24px 8px rgba(0,118,241,0.21);
               border-bottom: 4px solid #0076f1;
               .Company_news_btn{
                 background:#0076f1;
+                text-decoration: none;
               }
               //width:347px;
             }
@@ -496,6 +477,36 @@
 //  -o-animation-direction: normal;/*定义动画方式*/
 //}
 //地图定位 end
+.btn_more{
+  display: block;
+  margin: 20px auto 0;
+  background: #0076f1;
+  border-radius: 62px;
+  width: 145px;
+  height: 50px;
+  line-height: 50px;
+  border: none;
+  font-size: 20px;
+  color: #ffffff;
+  letter-spacing: 0.69px;
+  text-align: center;
+  text-decoration: none;
+    //color: #fff;
 
+  //>a{
+  //  display: inline-block;
+  //  width: 100%;
+  //  height: 100%;
+  //  line-height: 60px;
+  //
+  //  color: #fff;
+  //}
+
+  &:hover{
+    //box-shadow: 0 0 14px 10px #333;
+    color: #fff;
+    text-decoration: none;
+  }
+}
 
 

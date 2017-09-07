@@ -13,6 +13,7 @@
 .Product_intro > img {
   display: block;
   margin: 40px auto 16px;
+  max-width: 90%;
 }
 .Product_intro > .Product_intro_text {
   font-size: 20px;
@@ -34,6 +35,9 @@
   font-size: 20px;
   color: #333333;
   letter-spacing: -0.01px;
+}
+.tab-panel > div * {
+  max-width: 100%;
 }
 .characteristic_System > .characteristic_System_ {
   width: 76%;
@@ -163,4 +167,27 @@
 }
 .Solution_details_img > img {
   width: 100%;
+}
+.home_text_img {
+  width: 68%;
+  margin: 100px auto;
+}
+.home_text_img p {
+  height: 60px;
+  line-height: 60px;
+}
+.home_text_img .text_img_title {
+  font-size: 30px;
+  color: #fff;
+}
+.home_text_img .text_img_tel {
+  font-size: 26px;
+  color: #fff;
+}
+.home_text_img .join_us_div {
+  margin: 30px 0 !important;
+}
+.solution_intro p {
+  width: 100%!important;
+  text-indent: 2em;
 }

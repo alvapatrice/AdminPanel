@@ -2,9 +2,6 @@
   margin-bottom: -150px;
 }
 @media screen and (max-width: 1000px) {
-  .success_case_div {
-    height: 460px!important;
-  }
   .latest_infor {
     margin-top: 140px !important;
   }
@@ -88,6 +85,7 @@
 }
 .Latest_project .Latest_project_content > p > span {
   display: inline-block;
+  /**/
   font-size: 24px;
   color: #333333;
   letter-spacing: -0.38px;
@@ -167,6 +165,21 @@
   color: #999999;
   letter-spacing: -0.28px;
   text-indent: 2em;
+}
+.latest_infor .latest_infor_content > .infor_content .infor_p .infor_text > .new_details_btn {
+  border: 1px solid #0076f1;
+  border-radius: 2px;
+  line-height: 32px;
+  padding: 4px 8px;
+  color: #0076f1;
+  text-decoration: none;
+  text-align: center;
+  background: #fff;
+  font-size: 16px;
+}
+.latest_infor .latest_infor_content > .infor_content .infor_p .infor_text > .new_details_btn:hover {
+  background: #0076f1;
+  color: #fff;
 }
 .btn_page {
   text-align: center;

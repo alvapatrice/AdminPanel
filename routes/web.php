@@ -38,7 +38,10 @@ Route::group(['prefix'=>'api'],function(){
     Route::get('secondary-case-studies','ApiController@secondaryCaseStudies');
     Route::get('development-bases','ApiController@developmentBasesList');
     Route::get('development-bases/{id}','ApiController@developmentBaseDescription');
+	Route::get('about-us','ApiController@aboutUsList');
+    Route::get('about-us/{id}','ApiController@aboutUsDescription');
     Route::get('join-us','ApiController@joinUs');
+	 Route::get('friendly-links','ApiController@friendlyLinks');
 
     Route::post('contact-us','ApiController@contactUs');
     Route::post('requirement','ApiController@makeRequirement');

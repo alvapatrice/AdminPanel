@@ -1,8 +1,9 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use App\About;
 use App\CaseStudy;
+use App\FriendlyLink;
 use App\CustomerConctact;
 use App\CustomerRequirement;
 use App\DevelopmentBase;
@@ -34,8 +35,39 @@ class ApiController extends Controller
         $settings['headquarters_add']=Voyager::setting('main_address');
         $settings['branch_add']=Voyager::setting('br_address');
         $settings['company_intro']=Voyager::setting('comp_intro');
+		
+		
+		$banners=array();
+		$home_banners=array();
+		$home_banners['1']=Voyager::setting('home_banner1');
+		$home_banners['2']=Voyager::setting('home_banner2');
+		$home_banners['3']=Voyager::setting('home_banner3');
+		$banners['home']=$home_banners;
+		$banners['prd_center']=Voyager::setting('pro_banner');
+		$banners['solutions']=Voyager::setting('slt_banner');
+		$banners['cases']=Voyager::setting('case_banner');
+		$banners['news']=Voyager::setting('news_banner');
+		$banners['dev_bases']=Voyager::setting('dev_banner');
+		$banners['contact']=Voyager::setting('contact_banner');
+		
+		$banner_hovers=array();
+		$banner_hovers['home']=Voyager::setting('home_banner_hover');
+		$banner_hovers['prd_center']=Voyager::setting('pro_banner_hover');
+		$banner_hovers['solutions']=Voyager::setting('slt_banner_hover');
+		$banner_hovers['cases']=Voyager::setting('case_banner_hover');
+		$banner_hovers['news']=Voyager::setting('news_banner_hover');
+		$banner_hovers['dev_bases']=Voyager::setting('dev_banner_hover');
+		$banner_hovers['contact']=Voyager::setting('contact_banner_hover');
+		
+		$settings['banners']=$banners;
+		$settings['hovers']=$banner_hovers;
+		$settings['weibo_acc']=Voyager::setting('weibo_account');
+		$settings['wechat_acc']=Voyager::setting('wechat_account');
+		$settings['comp_app']=Voyager::setting('comp_app');
+		$settings['comp_app_url']=Voyager::setting('comp_app_url');
+		
 
-        return $settings;
+        return json_encode($settings);
     }
 
     public function posts(){
@@ -64,7 +96,7 @@ class ApiController extends Controller
     }
 
     public function productsList(){
-        $products=Product::orderBy('category_id')->get(['id','name','icon','category_id']);
+        $products=Product::orderBy('category_id')->get(['id','name','icon','category_id','title']);
         return json_encode($products);
     }
 
@@ -87,7 +119,7 @@ class ApiController extends Controller
     }
 
     public  function solutionsList(){
-        $solutions=Solution::orderBy('created_at')->get(['id','image','title','description']);
+        $solutions=Solution::orderBy('created_at')->get(['id','image','title','description','name']);
         return json_encode($solutions);
     }
 
@@ -123,6 +155,19 @@ class ApiController extends Controller
     public function developmentBaseDescription($id){
         $developmentBase=DevelopmentBase::where('id',$id)->get();
         return json_encode($developmentBase);
+    }
+	public function aboutUsList(){
+        $aboutUs=About::orderBy('created_at')->get(['id','title']);
+        return json_encode($aboutUs);
+    }
+	public function friendlyLinks(){
+		$friendlyLinks=FriendlyLink::orderBy('created_at')->get(['id','name','link']);
+        return json_encode($friendlyLinks);
+	}
+
+    public function aboutUsDescription($id){
+        $aboutUs=About::where('id',$id)->get();
+        return json_encode($aboutUs);
     }
 
     public function joinUs(){

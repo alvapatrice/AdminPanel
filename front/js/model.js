@@ -72,7 +72,7 @@ mvc.model.de_cust=function () {
                 $.ajax({
                     url:url_href+"/api/requirement",
                     async: true,
-                    crossDomain: true,
+                    crossDomain: true == !(document.all),
                     headers: {
                         'api_key':'1234567890',
                         "content-type": "application/x-www-form-urlencoded",
